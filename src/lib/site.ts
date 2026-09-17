@@ -8,7 +8,7 @@ export const site = {
   tagline: "Python that stays up for your agents.",
   hero: "Persistent Python for AI agents.",
   oneLiner:
-    "Managed, persistent Python runtimes for autonomous agents — fixed $/hr, no infra.",
+    "From one-off tool calls to persistent computational workflows.",
   description:
     "Spin up a fixed-rate instance. Your agents install packages, run for days, spawn more agents — model-agnostic. You don't manage servers. You buy compute that stays warm.",
 } as const;

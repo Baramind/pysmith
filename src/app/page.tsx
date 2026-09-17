@@ -12,7 +12,8 @@ import { monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.name} — ${site.hero}` },
-  description: site.description,
+  description:
+    "PySmith is the persistent, controlled Python runtime for long-horizon AI agents.",
   alternates: { canonical: site.url },
 };
 

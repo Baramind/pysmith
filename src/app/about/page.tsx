@@ -80,7 +80,7 @@ export default function AboutPage() {
       <CtaBand
         eyebrow="About"
         title="That is the whole pitch."
-        body="Persistent Python. Fixed $/hr. No infra. If it is the wrong shape, the comparison table will say so."
+        body="Persistent Python. Fixed $/hr. No infra. If it is the wrong shape, the product page will say so."
         primary={{ href: "/product/", label: "Product" }}
         secondary={{ href: "/pricing/", label: "Pricing" }}
       />
