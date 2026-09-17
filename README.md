@@ -36,8 +36,12 @@ npm run lint
 
 | Path | Page |
 | --- | --- |
-| `/` | Home |
+| `/` | Home (live ops board, call-mix strip, MCP gateway cards, field panels) |
 | `/product/` | Product |
+| `/field/` | In the field — index of evidence-led stories |
+| `/field/finance/` | Decision-grade finance |
+| `/field/mining/` | Shift-scale mining |
+| `/field/supply/` | Living supply plans |
 | `/pricing/` | Illustrative SKUs |
 | `/docs/` | Getting-started stub |
 | `/blog/` | Index |
@@ -47,6 +51,16 @@ npm run lint
 | (unknown) | 404 |
 
 Australian English throughout. Chart figures are either public vendor rates or labelled assumptions; see captions and source lists on each post.
+
+### In the field
+
+`/field/` and the three story routes are **evidence-led concepts**, not claimed customer deployments. Every number is attributed on the page (hover-source chips plus a sources section). Copy never says “case study”. Motion modules use a violet/teal demo palette; `prefers-reduced-motion` freezes them on a static frame.
+
+The homepage also shows:
+
+1. **LiveOpsBoard** — uptime clock, MCP connected chip, illustrative tool-call feed.
+2. **Call-mix strip** — session pattern (tool-call share). Digits labelled *Illustrative session*.
+3. **Where calls land** — three platform cards. The MCP Gateway card routes `python.exec` onto the PySmith runtime and dashes-denies unsafe tools.
 
 ## GitHub Pages + custom domain
 

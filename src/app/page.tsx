@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
-import { HeroRuntime } from "@/components/HeroRuntime";
+import { FieldPanels } from "@/components/field/FieldPanels";
+import { CallMixStrip } from "@/components/motion/CallMixStrip";
+import { LiveOpsBoard } from "@/components/motion/LiveOpsBoard";
+import { WhereCallsLand } from "@/components/motion/WhereCallsLand";
 import { accessMailto, site } from "@/lib/site";
+import { architectureCaption, fieldIntro } from "@/lib/field";
 import { posts } from "@/lib/posts";
 import { monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
@@ -109,13 +113,13 @@ export default function HomePage() {
             </p>
             <div className="ps-hero__cta">
               <a className="ps-btn ps-btn--blue" href={accessMailto}>
-                Start free
+                Request access
               </a>
               <Link className="ps-btn ps-btn--ghost" href="/pricing/">
                 See pricing
               </Link>
-              <Link className="ps-btn ps-btn--ghost" href="/blog/">
-                Read the blog
+              <Link className="ps-btn ps-btn--ghost" href="/field/">
+                In the field
               </Link>
             </div>
             <div className="ps-hero__tags">
@@ -124,7 +128,32 @@ export default function HomePage() {
               <span>Packages persist</span>
             </div>
           </div>
-          <HeroRuntime />
+          <LiveOpsBoard />
+        </div>
+      </section>
+
+      <CallMixStrip />
+
+      <WhereCallsLand />
+
+      <section className="ps-section">
+        <div className="ps-wrap ps-pad">
+          <div className="ps-headrow">
+            <div style={{ maxWidth: 720 }}>
+              <div className="ps-eyebrow">{fieldIntro.eyebrow}</div>
+              <h2 className="ps-h2">{fieldIntro.title}</h2>
+              <p className="ps-sub" style={{ marginTop: 16, marginBottom: 0 }}>
+                {fieldIntro.lead}
+              </p>
+            </div>
+            <Link className="ps-link-more" href="/field/">
+              All field stories →
+            </Link>
+          </div>
+          <FieldPanels />
+          <p className="ps-caption" style={{ marginTop: 28, marginBottom: 0 }}>
+            {architectureCaption}
+          </p>
         </div>
       </section>
 
@@ -372,7 +401,7 @@ export default function HomePage() {
       <CtaBand
         title="Python that stays up for your agents."
         body="Spin a fixed-rate instance. Install what you need. Leave it running. Your agents already know how to use a tool socket."
-        primary={{ href: accessMailto, label: "Start free" }}
+        primary={{ href: accessMailto, label: "Request access" }}
         secondary={{ href: "/docs/", label: "Read the docs stub" }}
       />
     </>

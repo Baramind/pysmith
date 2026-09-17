@@ -24,6 +24,9 @@ export function Footer() {
               <Link href="/pricing/">Pricing</Link>
             </li>
             <li>
+              <Link href="/field/">In the field</Link>
+            </li>
+            <li>
               <Link href="/docs/">Docs</Link>
             </li>
           </ul>
