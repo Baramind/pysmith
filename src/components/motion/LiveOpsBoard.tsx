@@ -38,7 +38,7 @@ export function LiveOpsBoard() {
   });
 
   return (
-    <div className="ps-figure-wrap">
+    <div className="mv-ops-wrap">
       <div className="mv-ops" aria-label="Live instance board, illustrative">
         <div className="mv-ops__head">
           <div>
@@ -85,19 +85,6 @@ export function LiveOpsBoard() {
             <div className="mv-ops__val">System container</div>
           </div>
         </div>
-      </div>
-
-      <div className="ps-float ps-float--tl">
-        <div className="ps-float__k">FIXED RATE</div>
-        <div className="ps-float__v">$0.08 / hr</div>
-      </div>
-      <div className="ps-float ps-float--navy ps-float--r">
-        <div className="ps-float__k">PACKAGES</div>
-        <div className="ps-float__v">Still installed</div>
-      </div>
-      <div className="ps-float ps-float--bl">
-        <div className="ps-float__k">DESTINATION</div>
-        <div className="ps-float__v">python.exec</div>
       </div>
     </div>
   );

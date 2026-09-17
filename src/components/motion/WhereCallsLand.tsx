@@ -76,14 +76,22 @@ export function WhereCallsLand() {
                 </div>
                 <div className="mv-gate__branches">
                   <div className="mv-gate__allow">
-                    <code>python.exec</code>
-                    <span className="mv-gate__chev">→</span>
-                    <strong>PySmith runtime</strong>
-                    <span className="mv-mark mv-mark--ok">✓</span>
+                    <div className="mv-gate__path">
+                      <code>python.exec</code>
+                      <span className="mv-gate__chev" aria-hidden="true">
+                        →
+                      </span>
+                      <strong>PySmith runtime</strong>
+                    </div>
+                    <span className="mv-mark mv-mark--ok" aria-label="allowed">
+                      ✓
+                    </span>
                   </div>
                   <div className="mv-gate__deny">
                     <code>unsafe.shell</code>
-                    <span className="mv-mark mv-mark--no">✕</span>
+                    <span className="mv-mark mv-mark--no" aria-label="denied">
+                      ✕
+                    </span>
                   </div>
                 </div>
               </div>

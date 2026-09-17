@@ -1314,6 +1314,11 @@ textarea {
   font-weight: 400;
 }
 
+.mv-ops-wrap {
+  position: relative;
+  min-width: 0;
+}
+
 .mv-ops {
   background: #fff;
   border: 1px solid #dedfda;
@@ -1595,8 +1600,8 @@ textarea {
   background: #fff;
   border: 1px solid #eeeef2;
   border-radius: 16px;
-  padding: 18px 16px;
-  min-height: 168px;
+  padding: 22px 16px;
+  min-height: 200px;
   display: flex;
   align-items: center;
 }
@@ -1769,18 +1774,26 @@ textarea {
 .mv-gate__deny {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 12px;
   border-radius: 12px;
   font-size: 12.5px;
   min-width: 0;
-  flex-wrap: wrap;
 }
 
 .mv-gate__allow {
   border: 1px solid rgba(14, 147, 132, 0.35);
   background: rgba(52, 211, 153, 0.1);
   color: var(--mv-ink);
+}
+
+.mv-gate__path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
 }
 
 .mv-gate__allow code,
@@ -1791,7 +1804,7 @@ textarea {
 
 .mv-gate__allow strong {
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 .mv-gate__chev {
