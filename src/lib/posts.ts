@@ -34,3 +34,11 @@ export const posts: Post[] = [
 export function getPost(slug: string): Post | undefined {
   return posts.find((post) => post.slug === slug);
 }
+
+export function newestPostDate(): string {
+  return posts.reduce((max, post) => (post.date > max ? post.date : max), "");
+}
+
+export function isNewestPost(post: Post): boolean {
+  return post.date === newestPostDate();
+}
