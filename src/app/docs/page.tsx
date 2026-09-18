@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
+import { offering } from "@/lib/offering";
 import { accessMailto, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Docs",
-  description:
-    "Getting started with PySmith: MCP connector, package installs, and persistence. Preview stub.",
+  description: offering.policyControlled,
 };
 
 export default function DocsPage() {
@@ -16,7 +16,11 @@ export default function DocsPage() {
         eyebrow="Docs"
         title="Getting started — stub"
         lead="Runtimes are in private preview. This page is the shape of the docs, not a live API reference. Nothing here will provision a machine."
-      />
+      >
+        <p className="ps-sub" style={{ marginBottom: 0, maxWidth: 680 }}>
+          {offering.policyControlled}
+        </p>
+      </PageHero>
 
       <section className="ps-section ps-section--white">
         <div className="ps-wrap ps-pad">

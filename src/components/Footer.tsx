@@ -59,9 +59,6 @@ export function Footer() {
               <Link href="/about/">About</Link>
             </li>
             <li>
-              <a href={site.github}>GitHub</a>
-            </li>
-            <li>
               <a href={`mailto:${site.email}`}>Contact</a>
             </li>
           </ul>

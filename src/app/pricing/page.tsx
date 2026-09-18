@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
+import { offering } from "@/lib/offering";
 import { accessMailto } from "@/lib/site";
 import { hoursPerMonth, monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description:
-    "Illustrative launch pricing for PySmith Small, Medium and Large persistent Python instances. Fixed US$/hr.",
+  description: offering.statefulInfra,
 };
 
 const faqs = [
@@ -37,7 +37,11 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="Fixed dollars per hour. No surprise child processes."
         lead="Three sizes. One clock. Illustrative launch pricing — labelled as such until we have a rate card we will honour."
-      />
+      >
+        <p className="ps-sub" style={{ marginBottom: 0, maxWidth: 680 }}>
+          {offering.statefulInfra}
+        </p>
+      </PageHero>
 
       <section className="ps-section">
         <div className="ps-wrap ps-pad">

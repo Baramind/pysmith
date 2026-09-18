@@ -9,6 +9,7 @@ import { LiveOpsBoard } from "@/components/motion/LiveOpsBoard";
 import { WhereCallsLand } from "@/components/motion/WhereCallsLand";
 import { accessMailto, site } from "@/lib/site";
 import { architectureCaption, fieldIntro } from "@/lib/field";
+import { offering } from "@/lib/offering";
 import { monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
 export const metadata: Metadata = {
@@ -186,6 +187,9 @@ export default function HomePage() {
           <div style={{ maxWidth: 720, marginBottom: 56 }}>
             <div className="ps-eyebrow">How it works</div>
             <h2 className="ps-h2">A desk. A rate. A socket.</h2>
+            <p className="ps-sub" style={{ marginTop: 16, marginBottom: 0 }}>
+              {offering.multiStep}
+            </p>
           </div>
           <div className="ps-flow">
             <span>CONNECT</span>
@@ -215,6 +219,9 @@ export default function HomePage() {
           <div style={{ maxWidth: 720, marginBottom: 52 }}>
             <div className="ps-eyebrow">What you buy</div>
             <h2 className="ps-h2">Persistent Python. No infra.</h2>
+            <p className="ps-sub" style={{ marginTop: 16, marginBottom: 0 }}>
+              {offering.managedSandboxes}
+            </p>
           </div>
           <div className="ps-grid ps-grid--3">
             {features.map((item) => (
