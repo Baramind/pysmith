@@ -4,7 +4,6 @@ export const site = {
   url: "https://pysmith.com",
   org: "Baramind",
   email: "hello@pysmith.com",
-  github: "https://github.com/Baramind/pysmith",
   tagline: "Python that stays up for your agents.",
   hero: "Persistent Python for AI agents.",
   oneLiner:

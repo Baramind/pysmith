@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { offering } from "@/lib/offering";
 import { posts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description:
-    "Notes on idle cloud spend, persistent Python, and the cost of leaving a server up for an agent.",
+  description: offering.managedSandboxes,
 };
 
 export default function BlogIndexPage() {
@@ -16,7 +16,11 @@ export default function BlogIndexPage() {
         eyebrow="Blog"
         title="Short notes for people whose agents will not go to bed."
         lead="Plain language. Cited numbers. No invented savings percentages."
-      />
+      >
+        <p className="ps-sub" style={{ marginBottom: 0, maxWidth: 680 }}>
+          {offering.managedSandboxes}
+        </p>
+      </PageHero>
       <section className="ps-section ps-section--white">
         <div className="ps-wrap ps-pad">
           <div className="ps-gap">

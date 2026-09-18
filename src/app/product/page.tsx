@@ -4,12 +4,12 @@ import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { PreviewBand } from "@/components/PreviewBand";
 import { OperatingLoop } from "@/components/motion/OperatingLoop";
+import { notOffering, offering } from "@/lib/offering";
 import { accessMailto } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Product",
-  description:
-    "PySmith gives AI agents a persistent Python workspace for long-running work. Agents can execute code, run simulations, preserve state and resume safely across days or weeks, with controlled dependencies, resources, network access and auditability.",
+  description: offering.executionLayer,
 };
 
 const persistent = [
@@ -141,7 +141,10 @@ export default function ProductPage() {
           <div style={{ maxWidth: 720, marginBottom: 48 }}>
             <div className="ps-eyebrow">What PySmith is</div>
             <h2 className="ps-h2">Persistent. Controlled.</h2>
-            <p className="ps-sub" style={{ marginTop: 16, marginBottom: 0 }}>
+            <p className="ps-sub" style={{ marginTop: 16, marginBottom: 16 }}>
+              {offering.policyControlled}
+            </p>
+            <p className="ps-sub" style={{ marginBottom: 0 }}>
               PySmith gives an agent a persistent, controlled Python workspace
               where it can execute real code, maintain state, use approved
               libraries, run simulations and resume work over time.
@@ -280,6 +283,10 @@ export default function ProductPage() {
                 or domain application. It is the execution layer that gives
                 agents a reliable place to perform long-running computational
                 work.
+              </p>
+              <p className="ps-sub" style={{ fontSize: 18 }}>
+                Not this: {notOffering.shortLived} That is a per-second
+                sandbox. Pause is the competing product.
               </p>
               <p className="ps-sub" style={{ marginBottom: 0 }}>
                 Other products already sell burst scale, Firecracker sandboxes
