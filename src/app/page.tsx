@@ -3,12 +3,10 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { GetStarted } from "@/components/GetStarted";
 import { RecentPosts } from "@/components/RecentPosts";
-import { FieldPanels } from "@/components/field/FieldPanels";
 import { CallMixStrip } from "@/components/motion/CallMixStrip";
 import { LiveOpsBoard } from "@/components/motion/LiveOpsBoard";
 import { WhereCallsLand } from "@/components/motion/WhereCallsLand";
 import { accessMailto, site } from "@/lib/site";
-import { architectureCaption, fieldIntro } from "@/lib/field";
 import { offering } from "@/lib/offering";
 import { monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
@@ -138,27 +136,6 @@ export default function HomePage() {
       <CallMixStrip />
 
       <WhereCallsLand />
-
-      <section className="ps-section">
-        <div className="ps-wrap ps-pad">
-          <div className="ps-headrow">
-            <div style={{ maxWidth: 720 }}>
-              <div className="ps-eyebrow">{fieldIntro.eyebrow}</div>
-              <h2 className="ps-h2">{fieldIntro.title}</h2>
-              <p className="ps-sub" style={{ marginTop: 16, marginBottom: 0 }}>
-                {fieldIntro.lead}
-              </p>
-            </div>
-            <Link className="ps-link-more" href="/field/">
-              All field stories →
-            </Link>
-          </div>
-          <FieldPanels />
-          <p className="ps-caption" style={{ marginTop: 28, marginBottom: 0 }}>
-            {architectureCaption}
-          </p>
-        </div>
-      </section>
 
       <section className="ps-section">
         <div className="ps-wrap ps-pad">
