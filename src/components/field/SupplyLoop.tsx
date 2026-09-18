@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-import { StageLoop } from "@/components/field/FinanceLoop";
+import { StageLoop } from "@/components/motion/StageLoop";
 import type { FieldStory } from "@/lib/field";
 
 const CARDS = [
