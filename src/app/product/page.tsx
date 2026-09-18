@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
+import { PreviewBand } from "@/components/PreviewBand";
 import { OperatingLoop } from "@/components/motion/OperatingLoop";
 import { accessMailto } from "@/lib/site";
 
@@ -324,6 +325,8 @@ export default function ProductPage() {
         primary={{ href: accessMailto, label: "Request access" }}
         secondary={{ href: "/docs/", label: "Docs stub" }}
       />
+
+      <PreviewBand />
     </>
   );
 }

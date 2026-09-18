@@ -38,6 +38,9 @@ export function Footer() {
               <Link href="/blog/">Blog</Link>
             </li>
             <li>
+              <Link href="/benchmarking/">Benchmarking</Link>
+            </li>
+            <li>
               <Link href="/blog/why-agent-builders-keep-overpaying-for-servers/">
                 Overpaying for servers
               </Link>

@@ -9,7 +9,6 @@ import { LiveOpsBoard } from "@/components/motion/LiveOpsBoard";
 import { WhereCallsLand } from "@/components/motion/WhereCallsLand";
 import { accessMailto, site } from "@/lib/site";
 import { architectureCaption, fieldIntro } from "@/lib/field";
-import { posts } from "@/lib/posts";
 import { monthlyFromHourly, skus, usd } from "@/lib/pricing";
 
 export const metadata: Metadata = {
@@ -356,48 +355,6 @@ export default function HomePage() {
             Illustrative launch pricing, not a quote. Rates will move. No fake
             discounts, no invented free-tier minutes.
           </p>
-        </div>
-      </section>
-
-      <section className="ps-section">
-        <div className="ps-wrap ps-pad">
-          <div className="ps-headrow">
-            <div style={{ maxWidth: 720 }}>
-              <div className="ps-eyebrow">From the blog</div>
-              <h2 className="ps-h2">Pain, with citations</h2>
-            </div>
-            <Link className="ps-link-more" href="/blog/">
-              All posts →
-            </Link>
-          </div>
-          <div className="ps-gap">
-            {posts.map((post) => (
-              <Link key={post.slug} className="ps-post-card" href={`/blog/${post.slug}/`}>
-                <div className="ps-meta" style={{ marginBottom: 16 }}>
-                  {post.category} · {post.readingMinutes} min
-                </div>
-                <h3>{post.title}</h3>
-                <p>{post.description}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="ps-section ps-section--white">
-        <div className="ps-wrap ps-pad-s">
-          <div className="ps-newsletter">
-            <div style={{ maxWidth: 560 }}>
-              <h2 style={{ fontSize: 26, marginBottom: 10 }}>Private preview</h2>
-              <p className="ps-sub" style={{ margin: 0 }}>
-                Runtimes are not self-serve yet. Email {site.email} — no fake
-                subscribe form, no invented waitlist count.
-              </p>
-            </div>
-            <a className="ps-btn" href={accessMailto}>
-              Request access
-            </a>
-          </div>
         </div>
       </section>
 
