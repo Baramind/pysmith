@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
+import { GetStarted } from "@/components/GetStarted";
+import { RecentPosts } from "@/components/RecentPosts";
 import { FieldPanels } from "@/components/field/FieldPanels";
 import { CallMixStrip } from "@/components/motion/CallMixStrip";
 import { LiveOpsBoard } from "@/components/motion/LiveOpsBoard";
@@ -405,6 +407,9 @@ export default function HomePage() {
         primary={{ href: accessMailto, label: "Request access" }}
         secondary={{ href: "/docs/", label: "Read the docs stub" }}
       />
+
+      <GetStarted />
+      <RecentPosts />
     </>
   );
 }
