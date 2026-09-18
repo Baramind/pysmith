@@ -3,12 +3,12 @@ import { CtaBand } from "@/components/CtaBand";
 import { FieldPanels } from "@/components/field/FieldPanels";
 import { PageHero } from "@/components/PageHero";
 import { architectureCaption, fieldIntro } from "@/lib/field";
+import { offering } from "@/lib/offering";
 import { accessMailto } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "In the field",
-  description:
-    "Evidence-led concepts for decision-grade finance, shift-scale mining and living supply plans. Not claimed customer deployments.",
+  description: offering.executionLayer,
 };
 
 export default function FieldIndexPage() {
@@ -18,7 +18,11 @@ export default function FieldIndexPage() {
         eyebrow={fieldIntro.eyebrow}
         title={fieldIntro.title}
         lead={fieldIntro.lead}
-      />
+      >
+        <p className="ps-sub" style={{ marginBottom: 0, maxWidth: 680 }}>
+          {offering.executionLayer}
+        </p>
+      </PageHero>
 
       <section className="ps-section ps-section--white">
         <div className="ps-wrap ps-pad">

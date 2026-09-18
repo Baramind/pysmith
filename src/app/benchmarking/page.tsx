@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { offering } from "@/lib/offering";
 import { posts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Benchmarking",
-  description:
-    "Cited notes on idle cloud spend and persistent Python. Pain, with citations — not a brochure.",
+  description: offering.multiStep,
 };
 
 export default function BenchmarkingPage() {
@@ -39,6 +39,10 @@ export default function BenchmarkingPage() {
               </Link>
             ))}
           </div>
+          <p className="ps-caption" style={{ marginTop: 28, marginBottom: 0 }}>
+            {offering.multiStep} The posts cite public numbers. They are not a
+            brochure.
+          </p>
         </div>
       </section>
     </>

@@ -3,11 +3,11 @@ import Link from "next/link";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { accessMailto, site } from "@/lib/site";
+import { offering } from "@/lib/offering";
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "Why PySmith exists: persistent Python for long-horizon agents, without turning builders into part-time SREs.",
+  description: offering.providerNeutral,
 };
 
 export default function AboutPage() {
@@ -17,7 +17,11 @@ export default function AboutPage() {
         eyebrow="About"
         title="Agents need a desk. Builders should not need a data centre."
         lead={`${site.name} is a ${site.org} product. The thesis is small on purpose.`}
-      />
+      >
+        <p className="ps-sub" style={{ marginBottom: 0, maxWidth: 680 }}>
+          {offering.providerNeutral}
+        </p>
+      </PageHero>
 
       <section className="ps-section ps-section--white">
         <div className="ps-wrap ps-pad">
@@ -60,12 +64,6 @@ export default function AboutPage() {
                 <ul>
                   <li>Product: {site.name}</li>
                   <li>Organisation: {site.org}</li>
-                  <li>
-                    Code:{" "}
-                    <a href={site.github} rel="noreferrer" target="_blank">
-                      GitHub
-                    </a>
-                  </li>
                   <li>
                     Mail:{" "}
                     <a href={`mailto:${site.email}`}>{site.email}</a>
